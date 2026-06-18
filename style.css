@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(0px);
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #1e2a3e;
+    transition: 0.2s;
+    margin: 0 4px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #2a6f97;
+}
+
+.btn-outline-success {
+    border-color: #2a6f97;
+    color: #2a6f97;
+}
+
+.btn-outline-success:hover {
+    background-color: #2a6f97;
+    border-color: #2a6f97;
+    color: white;
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    min-height: 90vh;
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), url('https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=1600') center center/cover no-repeat;
+    background-size: cover;
+    background-position: center 30%;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    margin-top: 0;
+}
+
+/* Country Cards */
+.country-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.country-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.country-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.country-card:hover img {
+    transform: scale(1.1);
+}
+
+.country-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    padding: 30px 20px 20px;
+    transition: all 0.3s ease;
+}
+
+.country-card:hover .country-overlay {
+    padding-bottom: 30px;
+}
+
+.country-overlay h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.country-overlay p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.explore-btn {
+    background: #ff8c42;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+    background: #e6762e;
+    transform: translateX(5px);
+    color: white;
+}
+
+/* Featured Destinations Section */
+.featured-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.destination-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.destination-info {
+    padding: 20px;
+}
+
+.destination-info h4 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1e3c72;
+}
+
+.rating {
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #ff8c42;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Destination Button Styles */
+.destination-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.destination-btn:hover {
+    background: linear-gradient(135deg, #2a5298, #1e3c72);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(30, 60, 114, 0.3);
+    color: white;
+}
+
+.destination-btn:active {
+    background-color: #0066cc !important;
+    transform: scale(0.95);
+    transition: all 0.1s ease;
+}
+
+/* Stats Section */
+.stats-section {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 80px 0;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Testimonial Section */
+.testimonial-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    height: 100%;
+}
+
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.testimonial-name {
+    font-weight: 700;
+    color: #1e3c72;
+    margin-bottom: 5px;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    background: linear-gradient(135deg, #ff8c42, #ff6b35);
+    padding: 60px 0;
+}
+
+.newsletter-input {
+    border-radius: 50px;
+    border: none;
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.newsletter-btn {
+    background: #1e3c72;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+    background: #2a5298;
+    transform: translateY(-2px);
+}
+
+/* Button Active State - Blue when clicked */
+.btn-primary:active,
+.explore-btn:active,
+.newsletter-btn:active,
+.btn-outline-success:active,
+.destination-btn:active {
+    background-color: #0066cc !important;
+    border-color: #0066cc !important;
+    transform: scale(0.95);
+    transition: all 0.1s ease;
+}
+
+/* For all buttons blue active state */
+button:active,
+.btn:active,
+a:active {
+    transition: all 0.1s ease;
+}
+
+/* Text content styling */
+.hero h6 {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 40px;
+    backdrop-filter: blur(4px);
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: 3.4rem;
+    font-weight: 800;
+    line-height: 1.2;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 90%;
+    opacity: 0.95;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background: #ff8c42;
+    border: none;
+    padding: 12px 32px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover {
+    background: #e6762e;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero {
+        text-align: center;
+    }
+    .stat-number {
+        font-size: 2rem;
+    }
+    .newsletter-btn {
+        margin-top: 15px;
+        margin-left: 0;
+    }
+}
+
+/* Animations */
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero .col-lg-6 > * {
+    animation: fadeSlideUp 0.7s ease forwards;
+}
+
+.hero h6 {
+    animation-delay: 0.1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.hero h1 {
+    animation-delay: 0.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.hero p {
+    animation-delay: 0.4s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.hero a {
+    animation-delay: 0.6s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Footer Styles */
+.main-footer {
+    background-color: #0a1922;
+    color: #ffffff;
+    padding: 60px 0 20px;
+}
+
+.footer-widget h4 {
+    color: #ff8c42;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.footer-widget p {
+    color: #b0c4de;
+    line-height: 1.6;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #b0c4de;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff8c42;
+    padding-left: 5px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #ff8c42;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 40px;
+    text-align: center;
+    color: #b0c4de;
+}
+
+/* Navbar toggler focus */
+.navbar-toggler:focus {
+    box-shadow: none;
+}
